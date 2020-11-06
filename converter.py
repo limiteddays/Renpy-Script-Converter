@@ -56,5 +56,4 @@ if __name__ == '__main__':
     app.addButton('convert', script_converter)
     app.setFont(size=16, family="Arial", underline=False)
 
-
     app.go()
