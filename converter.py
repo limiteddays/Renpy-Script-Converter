@@ -32,6 +32,8 @@ def script_converter():
     app.infoBox("info2", info2idea , parent=None)
 
 
+#TODO with the file type support
+
 # def script_converter_file(file=""):
 #     i = 0
 #     file: TextIO
@@ -42,11 +44,6 @@ def script_converter():
 #             i += 1
 #
 #     print("process done total changed script number: " + str(i))
-
-
-def get_entry():
-    stuff = app.getTextArea("t1")
-    print(stuff)
 
 
 if __name__ == '__main__':
