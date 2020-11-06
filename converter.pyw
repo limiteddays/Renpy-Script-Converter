@@ -11,7 +11,7 @@ def script_loader():
         texts = app.getTextArea("t1")
         initialize.write(texts)
 
-        app.infoBox("info1", "Script Loaded", parent=None)
+        app.infoBox("info1", "Script Loaded (스크립트 로드 완료)", parent=None)
 
 
 def script_converter():
@@ -28,9 +28,8 @@ def script_converter():
         for stuff in text_output:
             app.setTextArea("t2", stuff, end=True, callFunction=True)
 
-    info2idea = "total converted lines: " + str(i)
+    info2idea = "total converted lines (변환된 라인 수): " + str(i)
     app.infoBox("info2", info2idea , parent=None)
-
 
 #TODO with the file type support
 
@@ -46,14 +45,38 @@ def script_converter():
 #     print("process done total changed script number: " + str(i))
 
 
+#TODO Setting varliable support
+
+
 if __name__ == '__main__':
-    app = gui()
-    app.addLabel("title", "Renpy Script Converter by Limited Factory V0.01")
+
+    app = gui("Notebook", useTtk=True)
+    app.setTtkTheme("clam")
+    app.startNotebook("Notebook")
+
+    #Starting note 1
+    app.startNote("Main page")
+
+    app.addLabel("l1", "Renpy Script Converter by Limited Factory V0.01")
+
     app.addScrolledTextArea("t1")
     app.addScrolledTextArea("t2")
+
     # app.addFileEntry("f1")
     app.addButton('load', script_loader)
     app.addButton('convert', script_converter)
-    app.setFont(size=16, family="Arial", underline=False)
+    app.setFont(size=30, family="Arial", underline=False)
 
+    app.stopNote()
+
+    #starting note 2
+
+    #TODO work on the setting variable page
+    app.startNote("Setting variables")
+
+    app.addLabel("l2", "This page is for setting up the character names")
+
+    app.stopNote()
+
+    app.stopNotebook()
     app.go()
