@@ -1,6 +1,6 @@
 # Renpy Script Converter (KOR)
 #### 리미티드 팩토리
- Renpy Script Converter (렌파이 스크립트 컨버터)
+### 개요
  
  ![screenshot](githubimage1.png)
  
@@ -11,9 +11,20 @@
  
  결과는 out.txt 로 저장됩니다.
  
+ ### 쓰는 방법
+ 
+1) 최근 릴리즈된 파일을 다운해 주세요
+2) convert.pyw 를 클릭해 주세요 (압축을 푼 이후에)
+3) 스크립트를 모두 다 첫 번째 박스에 넣고 Load 를 눌러주세요
+4) "loaded" 라는 안내문 이후에 convert 를 눌러주세요
+5) ???
+6) 존나좋군!
+ 
 
 # Renpy Script Converter (ENG)
 #### LIMITED FACTORY
+
+### Introduction
 
  ![screenshot](githubimage1.png)
 
@@ -25,6 +36,18 @@ Just paste the script, click load. This will load the scripts into in.txt
 then click convert, this will convert the lines into renpy scripts.
 
 - Please put all the suggestion into a github :) 
+
+### How to use it
+
+1) Download the release file (the most recent one)
+2) click the converter.pyw 
+3) paste all the script there and click load. 
+4) click convert after the prompt says "loaded"
+3) ???
+4) PROFIT! 
+
+- it might require you to have python interpreter. 
+- If you have renpy downloaded, no need for the python.
 
  
  
