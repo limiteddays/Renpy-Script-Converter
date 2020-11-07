@@ -35,7 +35,7 @@ class converter():
         info2idea = "total converted lines (변환된 라인 수): " + str(i)
         app.infoBox("info2", info2idea, parent=None)
 
-    # TODO Setting varliable support
+
     def set_char_var(self):
         name = app.getEntry("char_var")
         ini = app.getEntry("char_ini")
@@ -46,7 +46,7 @@ class converter():
         else:
             stuff = str(name) + ":" + str(ini) + "\n"
 
-            with open("name.txt", "w", encoding="utf-8") as name_in:
+            with open("name.txt", "a", encoding="utf-8") as name_in:
                 name_in.write(stuff)
 
             with open("name.txt", "r", encoding="utf-8") as name_out:
