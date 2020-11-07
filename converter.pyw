@@ -5,8 +5,9 @@ import sys
 
 class converter():
 
-    def __init__(self):
+    def __init__(self, rule, name):
         self.rule = ""
+        self.name = {}
 
     def script_loader(self):
         file: TextIO
@@ -23,6 +24,8 @@ class converter():
         i = 0
         with open("in.txt", "r", encoding="utf-8") as openfileobject, open("out.txt", "w", encoding="utf-8") as export:
             for stuff in openfileobject:
+                # changing the value
+
                 line = stuff.rstrip()
                 export.write('" {} "\n'.format(stuff))
                 i += 1
@@ -34,12 +37,25 @@ class converter():
 
         info2idea = "total converted lines (변환된 라인 수): " + str(i)
 
+    # for setting the name
+    def name_set(self):
+        with open("name.txt", "r", encoding="utf-8") as name_out:
+            for stuff in name_out:
+                name_ini = stuff.split(":")
+
+                name_get = str(name_ini[0])
+                name_ini = str(name_ini[1])
+
+                self.name[name_get] = name_ini
+                print(self.name)
+
+    # for setting the char_value
     def set_char_var(self):
         name = app.getEntry("char_var")
         ini = app.getEntry("char_ini")
 
         if name == "" or ini == "":
-            app.infoBox("info4", "Some statement is missing (하나 이상의 변수가 빠졌습니다.)", parent=None)
+            app.infoBox("info4", "Some statements are missing (하나 이상의 변수가 빠졌습니다.)", parent=None)
 
         else:
             stuff = str(name) + ":" + str(ini) + "\n"
@@ -51,6 +67,8 @@ class converter():
                 app.clearTextArea("char_var_list", callFunction=True)
                 for stuff in name_out:
                     app.setTextArea("char_var_list", stuff, end=True, callFunction=True)
+
+            self.name_set()
 
             app.infoBox("info5", "Successfully added. (성공적으로 추가되었습니다.)", parent=None)
 
