@@ -33,15 +33,13 @@ class converter():
                 app.setTextArea("t2", stuff, end=True, callFunction=True)
 
         info2idea = "total converted lines (변환된 라인 수): " + str(i)
-        app.infoBox("info2", info2idea, parent=None)
-
 
     def set_char_var(self):
         name = app.getEntry("char_var")
         ini = app.getEntry("char_ini")
 
         if name == "" or ini == "":
-            pass
+            app.infoBox("info4", "Some statement is missing (하나 이상의 변수가 빠졌습니다.)", parent=None)
 
         else:
             stuff = str(name) + ":" + str(ini) + "\n"
@@ -54,6 +52,14 @@ class converter():
                 for stuff in name_out:
                     app.setTextArea("char_var_list", stuff, end=True, callFunction=True)
 
+            app.infoBox("info5", "Successfully added. (성공적으로 추가되었습니다.)", parent=None)
+
+    def clear_name(self):
+        app.clearTextArea("char_var_list", callFunction=True)
+        with open("name.txt", "w", encoding="utf-8") as name_in:
+            name_in.write("")
+
+        app.infoBox("info6", "Successfully cleared. (성공적으로 삭제되었습니다.)", parent=None)
 
     def set_rule(self, rule):
         self.rule = rule
@@ -94,7 +100,6 @@ if __name__ == '__main__':
     app.addLabel("l20", "This is the main page to put your scripts in and convert it")
     app.addLabel("l21", "To rego the character variables, go to setting variables page up there")
 
-
     app.addScrolledTextArea("t1")
     app.addScrolledTextArea("t2")
 
@@ -114,16 +119,15 @@ if __name__ == '__main__':
     app.addLabel("l3", "Ex) Hana:I am the god! (하나: 내가 신이다!)")
     app.addLabel("l4", "Output) Hana:'I am the god!' (h: '내가 신이다!'")
 
-
     app.addEntry("char_var")
     app.addEntry("char_ini")
-    app.addLabel("l5", "These are values that are in the dictionary right now")
+    app.addLabel("l5", "These are values that are in the name.txt right now (name.txt 파일에 있는 이름 변수들입니다.)")
     app.addScrolledTextArea("char_var_list", text=None)
-    app.setEntryDefault("char_var", "put character name ex) Mina")
-    app.setEntryDefault("char_ini", "put character initial to use in renpy ex) m")
-
+    app.setEntryDefault("char_var", "put character name ex) Hana (캐릭터 이름을 설정해 주세요 예) 하나)")
+    app.setEntryDefault("char_ini", "put character initial to use in renpy ex) h (캐릭터 이니셜을 설정해 주세요 예) h")
 
     app.addButton('Set character variable', converter.set_char_var)
+    app.addButton('Clear Character Variable', converter.clear_name)
 
     app.stopNote()
 
