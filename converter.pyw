@@ -110,9 +110,9 @@ if __name__ == '__main__':
     # TODO work on the setting variable page
     app.startNote("Setting variables")
 
-    app.addLabel("l2", "This page is for setting up the character names")
-    app.addLabel("l3", "Ex) Mina:Can you be my dog?")
-    app.addLabel("l4", "Output) m:'Can you be my dog?' ")
+    app.addLabel("l2", "This page is for setting up the character names (캐릭터 이름을 설정하는 페이지입니다)")
+    app.addLabel("l3", "Ex) Hana:I am the god! (하나: 내가 신이다!)")
+    app.addLabel("l4", "Output) Hana:'I am the god!' (h: '내가 신이다!'")
 
 
     app.addEntry("char_var")
