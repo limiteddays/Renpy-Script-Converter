@@ -1,4 +1,4 @@
-# Renpy Script Converter by KUN
+# Renpy Script Converter by LIMITED KUN
 ## Version 0.1.1 Update
 
  <img src="githubimage2.png" width="400">
