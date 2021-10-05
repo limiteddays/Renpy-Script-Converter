@@ -1,11 +1,14 @@
 # Renpy Script Converter (KOR)
-#### 리미티드 팩토리
-### 개요
- 
+## Version 0.1.1 Update
+
+
+
+
+
+
+## Version 0.01 Update
+
  ![screenshot](githubimage1.png)
- 
- 안녕하세요 하나님의 캠퍼스 라이프를 제작중인 리미티드라고 합니다.
- 간단한 스크립트 변환기를 만들어 보았습니다.
  
  스크립트를 넣고, Load 를 먼저 누르고. Convert 를 눌러주세요.
  
