@@ -103,7 +103,7 @@ class converter():
 
 
 if __name__ == '__main__':
-    app = gui("Notebook", useTtk=True)
+    app = gui("Script Converter by KUN", useTtk=True)
     app.setTtkTheme("clam")
     app.startNotebook("Notebook")
 

@@ -1,10 +1,19 @@
 # Renpy Script Converter (KOR)
 ## Version 0.1.1 Update
 
+ ![screenshot](githubimage2.png)
 
+When you paste or select the file by the button, the converter will wrap your sentences into renpy script '' <- this.
+Then the file will be saved as output.txt, or you can just view them from the tool as well. 
 
+ ![screenshot](githubimage3.png)
 
+now, you can also have your char variables to be set as well.
+This will set the char variable and convert your written script with it.
 
+** Important **
+you need to put your original script into specific way to successfully convert them into a renpy script.
+please follow the prompt for more info. 
 
 ## Version 0.01 Update
 
