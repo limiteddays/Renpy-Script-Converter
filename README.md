@@ -6,8 +6,7 @@
 When you paste or select the file by the button, the converter will wrap your sentences into renpy script '' <- this.
 Then the file will be saved as output.txt, or you can just view them from the tool as well. 
 
- ![screenshot](githubimage3.png){:height="50%" width="50%"}
-
+ <img src="githubimage3.png" width="400">
 now, you can also have your char variables to be set as well.
 This will set the char variable and convert your written script with it.
 
@@ -17,7 +16,7 @@ please follow the prompt for more info.
 
 ## Version 0.01 Update
 
- ![screenshot](githubimage1.png){:height="50%" width="50%"}
+ <img src="githubimage1.png" width="400">
  
  스크립트를 넣고, Load 를 먼저 누르고. Convert 를 눌러주세요.
  
