@@ -1,7 +1,7 @@
 # Renpy Script Converter by KUN
 ## Version 0.1.1 Update
 
- ![screenshot](githubimage2.png){:height="50%" width="50%"}
+ <img src="githubimage2.png" width="400">
 
 When you paste or select the file by the button, the converter will wrap your sentences into renpy script '' <- this.
 Then the file will be saved as output.txt, or you can just view them from the tool as well. 
