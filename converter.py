@@ -1,7 +1,8 @@
 from typing import TextIO
 from appJar import gui
 import sys
-
+import json
+from json_handler import json_handler
 
 class converter():
 
@@ -58,6 +59,9 @@ class converter():
             app.infoBox("info4", "one or more statements are missing (하나 이상의 변수가 빠졌습니다.)", parent=None)
 
         else:
+            #json testing
+            json_handler.save(ini, name)
+
             stuff = str(name) + ":" + str(ini) + "\n"
 
             with open("name.txt", "a", encoding="utf-8") as name_in:
